@@ -5,7 +5,7 @@ export default function PlateauSource() {
   const plateauSourceProps: SourceProps = {
     id: 'plateau-tiles',
     type: 'vector',
-    tiles: ['http://localhost:5173/mvt/{z}/{x}/{y}.pbf'],
+    tiles: [`${import.meta.env.VITE_URL}/mvt/{z}/{x}/{y}.pbf`],
     attribution: '<a href=\'https://www.mlit.go.jp/plateau/\' target=\'_blank\'>© 国土交通省 Project PLATEAU</a>',
     minzoom: 10,
     maxzoom: 16,
@@ -38,8 +38,8 @@ export default function PlateauSource() {
         paint={{
           'fill-extrusion-opacity': 0.7,
           'fill-extrusion-color': '#aa4444',
-          'fill-extrusion-height': ['-',['get', 'minHeight'], 10],
-          'fill-extrusion-base': ['-',['get', 'minHeight'], 10],
+          'fill-extrusion-height': ['-', ['get', 'minHeight'], 10],
+          'fill-extrusion-base': ['-', ['get', 'minHeight'], 10],
         }}
       />
 
