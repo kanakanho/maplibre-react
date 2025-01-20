@@ -1,7 +1,7 @@
 import type { MapViewState } from 'deck.gl'
 import { Map } from '@vis.gl/react-maplibre'
 import OSMSource from './components/OSMSource'
-import PlateauSource from './components/PlateauSource'
+import PlateauSources from './components/PlateauSources'
 
 function App() {
   const initialViewState: MapViewState = {
@@ -18,7 +18,7 @@ function App() {
       controller
     >
       <OSMSource />
-      <PlateauSource />
+      <PlateauSources />
     </Map>
   )
 }

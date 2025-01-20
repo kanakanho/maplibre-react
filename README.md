@@ -24,12 +24,12 @@ git clone git@github.com:MIERUNE/plateau-gis-converter.git
 ### PLATEAU データの変換
 
 ```sh
-cargo run --package nusamai --release -- ~/path/to/99999_hoge-shi_city_2023_citygml_1_op/udx/*/*_6697_op.gml --sink mvt --output mvt
+cargo run --package nusamai --release -- ~/path/to/99999_hoge-shi_city_2023_citygml_1_op/udx/*/*_6697_op.gml --sink mvt --output hoge-shi
 ```
 
 ### public/mvt ディレクトリへの配置
 
-変換した MVT データを public/mvt ディレクトリに配置します。
+変換した MVT データを public/hoge-shi ディレクトリに配置します。
 
 ### mvt データの確認
 
@@ -39,7 +39,7 @@ Python を用いて mvt のデータを確認できます
 $ python -m venv .venv
 $ . .venv/bin/activate
 $ pip install mapbox_vector_tile
-$ python mvt.py
+$ python mvt.py hoge-shi
 ```
 
 ### dev サーバーの起動
